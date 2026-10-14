@@ -1,10 +1,12 @@
-name: context
+name: Print context values
+
 on: push
+
 jobs:
-  describe:
+  context:
     runs-on: ubuntu-latest
     steps:
-      - name: Describe this run
+      - name: Print run context
         run: |
           echo "Repository: ${{ github.repository }}"
           echo "Branch: ${{ github.ref_name }}"
