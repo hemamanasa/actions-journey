@@ -1,24 +1,16 @@
-name: Environment variable precedence
-
+name: env-demo
 on: push
-
 env:
   APP_NAME: journey
-
 jobs:
-  env-demo:
+  build:
     runs-on: ubuntu-latest
     env:
       LOG_LEVEL: info
     steps:
-      - name: Show job environment
-        run: |
-          echo "APP_NAME=$APP_NAME"
-          echo "LOG_LEVEL=$LOG_LEVEL"
-
-      - name: Override log level
+      - name: Default log level
+        run: echo "$APP_NAME uses log level $LOG_LEVEL"
+      - name: Debug log level
         env:
           LOG_LEVEL: debug
-        run: |
-          echo "APP_NAME=$APP_NAME"
-          echo "LOG_LEVEL=$LOG_LEVEL"
+        run: echo "$APP_NAME uses log level $LOG_LEVEL"
