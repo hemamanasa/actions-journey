@@ -3,7 +3,7 @@ name: Print context values
 on: push
 
 jobs:
-  context:
+  describe:
     runs-on: ubuntu-latest
     steps:
       - name: Describe this run
