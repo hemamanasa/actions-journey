@@ -1,4 +1,4 @@
-name: Print context values
+name: context
 
 on: push
 
