@@ -13,3 +13,4 @@ jobs:
           echo "Commit: ${{ github.sha }}"
           echo "Event: ${{ github.event_name }}"
           echo "Runner OS: ${{ runner.os }}"
+# Lab verification
