@@ -1,10 +1,8 @@
 name: region
-
 on: push
-
 jobs:
-  show-region:
+  deploy-info:
     runs-on: ubuntu-latest
     steps:
-      - name: Show deploy region
-        run: echo "Deploy region: ${{ vars.DEPLOY_REGION }}"
+      - name: Show the target region
+        run: echo "Deploying to ${{ vars.DEPLOY_REGION }}"
